@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<BASE target="main">
+<TITLE>SSL</TITLE>
+</HEAD>
+
+<BODY bgcolor="#FFFBF0" LINK="#0000FF" VLINK="#0000FF" ALINK="#33CCFF">
+
+<TABLE width=100% border=0 cellspacing=0 cellpadding=2> 
+  <TR>
+    <TD align=left width=80% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+        <B>> Menu > SSL</B>
+      </FONT>
+    </TD>
+    <TD align=right width=20% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+	<B><< <A HREF="/cgi-bin/start.cgi?html=main.html">Main</A></B>
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+
+<DIV ALIGN=Center>
+<FORM ENCTYPE="multipart/form-data" action="/cgi-bin/start.cgi" method="post">
+<INPUT type="hidden" name="func" value="ssl">
+<A name="SSL"></A>
+<TABLE summary="ssl" width="95%" border="1" bgcolor="#FFFFF0">
+<TR>
+  <TD colspan="2" bgcolor="#BBD0FF" >
+    <FONT color="#0000FF"><B>SSL Server Key</B></FONT>
+  </TD>
+</TR>
+
+<TR>
+  <TD width="40%" NOWRAP>Certificate: <!--#ECHO VAR="S2E_SSL_SERVER_CERT"--></TD>
+  <TD>
+    <input type='file' name='S2E_SSL_SERVER_CERT'>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Private Key: <!--#ECHO VAR="S2E_SSL_SERVER_KEY"--></TD>
+  <TD>
+    <input type='file' name='S2E_SSL_SERVER_KEY'>
+  </TD>
+</TR>
+
+<TR>
+  <TD colspan="2">
+    <INPUT type="submit" name="set" value="Submit">
+  </TD>
+</TR>
+</TABLE>
+
+</DIV>
+
+</BODY>
+</HTML>

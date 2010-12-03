@@ -1,0 +1,8 @@
+#!/bin/sh
+. /etc/rc.config
+
+if [ -z "${CU_LANTRONIX_S2E_MANUALLY}" ] ; then
+	if [ -n "${CU_LANTRONIX_S2E_CON1}${CU_LANTRONIX_S2E_CON_BOTH}" ]; then /bin/s2e -0 -C /etc/s2e-ttyS0.conf & fi
+	if [ -n "${CU_LANTRONIX_S2E_CON2}${CU_LANTRONIX_S2E_CON_BOTH}" ]; then /bin/s2e -1 -C /etc/s2e-ttyS1.conf & fi
+fi
+

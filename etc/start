@@ -1,0 +1,22 @@
+#!/bin/sh
+
+DBUG_CONFIG_PATH="/usr/local/bin/dbug-config"
+
+if [ -d /var/etc ] ; then
+	if [ -f /usr/local/etc/passwd ] ; then
+		rm -rf /var/etc/passwd
+		ln -s /usr/local/etc/passwd /var/etc/passwd
+	fi
+	if [ -f /usr/local/etc/group ] ; then
+		rm -rf /var/etc/group
+		ln -s /usr/local/etc/group /var/etc/group
+	fi
+	if [ -f /usr/local/etc/hosts ] ; then
+		rm -rf /var/etc/hosts
+		ln -s /usr/local/etc/hosts /var/etc/hosts
+	fi
+fi
+
+if [ -x "$DBUG_CONFIG_PATH" ] ; then
+	$DBUG_CONFIG_PATH bootfc 0
+fi

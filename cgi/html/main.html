@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<BASE target="main">
+<TITLE>C</TITLE>
+</HEAD>
+
+<BODY bgcolor="#FFFBF0" LINK="#0000FF" VLINK="#0000FF" ALINK="#33CCFF">
+
+<TABLE width=100% border=0 cellspacing=0 cellpadding=2> 
+  <TR>
+    <TD align=left width=80% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+        <B>> Menu > Main</B>
+      </FONT>
+    </TD>
+    <TD align=right width=20% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+	<B><< <A HREF="/cgi-bin/myweb.cgi?html=main.html">Main</A></B>
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+
+<DIV ALIGN=Center>
+<TABLE summary="main" width="95%" border="1" bgcolor="#FFFFF0">
+<TR>
+  <TD colspan="2" bgcolor="#BBD0FF">
+    <FONT color="#0000FF"><B>Inputs</B></FONT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Static var:</TD>
+  <TD><!--#ECHO VAR="S2E_STATIC_VAR"--> </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Input 1:</TD>
+  <TD><!--#ECHO VAR="S2E_INPUT_1_STATE"--> </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Input 2:</TD>
+  <TD><!--#ECHO VAR="S2E_INPUT_2_STATE"--> </TD>
+</TR>
+</TABLE>
+</DIV>
+
+
+<DIV ALIGN=Center>
+<FORM action="/cgi-bin/myweb.cgi" method="post">
+<INPUT type="hidden" name="func" value="serial<!--#ECHO VAR="S2E_CHAN"-->">
+<INPUT type="hidden" name="chan" value="<!--#ECHO VAR="S2E_CHAN"-->">
+
+<TABLE summary="outputs" width="95%" border="1" bgcolor="#FFFFF0">
+<TR>
+  <TD colspan="2" bgcolor="#BBD0FF">
+    <FONT color="#0000FF"><B>Outputs Current State</B></FONT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Output 1:</TD>
+  <TD>
+  <SELECT name="S2E_OUTPUT_1_CURRENT_STATE">
+    <OPTION value="0" <!--#ECHO VAR="S2E_OUTPUT_1_CURRENT_STATE@0"-->>0
+    <OPTION value="1" <!--#ECHO VAR="S2E_OUTPUT_1_CURRENT_STATE@1"-->>1
+  </SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Output 2:</TD>
+  <TD>
+  <SELECT name="S2E_OUTPUT_2_CURRENT_STATE">
+    <OPTION value="0" <!--#ECHO VAR="S2E_OUTPUT_2_CURRENT_STATE@0"-->>0
+    <OPTION value="1" <!--#ECHO VAR="S2E_OUTPUT_2_CURRENT_STATE@1"-->>1
+  </SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD colspan="2">
+    <INPUT type="submit" name="set" value="Submit">
+  </TD>
+</TR>
+</FORM>
+</DIV>
+
+
+<DIV ALIGN=Center>
+<FORM action="/cgi-bin/myweb.cgi" method="post">
+<INPUT type="hidden" name="func" value="serial<!--#ECHO VAR="S2E_CHAN"-->">
+<INPUT type="hidden" name="chan" value="<!--#ECHO VAR="S2E_CHAN"-->">
+
+<TABLE width="95%" border="1" bgcolor="#FFFFF0">
+<TR>
+  <TD colspan="2" bgcolor="#BBD0FF">
+    <FONT color="#0000FF"><B>Outputs Default State</B></FONT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Output 1:</TD>
+  <TD>
+  <SELECT name="S2E_OUTPUT_1_DEFAULT_STATE">
+    <OPTION value="0" <!--#ECHO VAR="S2E_OUTPUT_1_DEFAULT_STATE@0"-->>0
+    <OPTION value="1" <!--#ECHO VAR="S2E_OUTPUT_1_DEFAULT_STATE@1"-->>1
+  </SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Output 2:</TD>
+  <TD>
+  <SELECT name="S2E_OUTPUT_2_DEFAULT_STATE">
+    <OPTION value="0" <!--#ECHO VAR="S2E_OUTPUT_2_DEFAULT_STATE@0"-->>0
+    <OPTION value="1" <!--#ECHO VAR="S2E_OUTPUT_2_DEFAULT_STATE@1"-->>1
+  </SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD colspan="2">
+    <INPUT type="submit" name="set" value="Submit">
+  </TD>
+</TR>
+</FORM>
+</DIV>
+
+</BODY>
+</HTML>

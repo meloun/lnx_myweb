@@ -1,0 +1,126 @@
+<HTML> 
+<HEAD>
+<META http-Equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<BASE target="main">
+<TITLE>Port Setup</TITLE>
+</HEAD>
+
+<BODY bgcolor="#FFFBF0" LINK="#0000FF" VLINK="#0000FF" ALINK="#33CCFF">
+
+<TABLE width=100% border=0 cellspacing=0 cellpadding=2> 
+  <TR>
+    <TD align=left width=80% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+        <B>> Menu > Serial Port <!--#ECHO VAR="S2E_CHAN"--> > Port Setup</B>
+      </FONT>
+    </TD>
+    <TD align=right width=20% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+	<B><< <A HREF="/cgi-bin/start.cgi?html=main.html">Main</A></B>
+     </FONT>
+   </TD>
+</TR>
+</TABLE>
+
+<DIV ALIGN=Center>
+<FORM action="/cgi-bin/start.cgi" method="post">
+<INPUT type="hidden" name="func" value="serial<!--#ECHO VAR="S2E_CHAN"-->">
+<INPUT type="hidden" name="chan" value="<!--#ECHO VAR="S2E_CHAN"-->">
+<A name="SERIAL"></A>
+<TABLE summary="serial" width="95%" border="1" bgcolor="#FFFFF0">
+
+<TR>
+  <TD colspan="2" bgcolor="#BBD0FF">
+    <FONT color="#0000FF"><B>Port Setup</B></FONT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Interface:</TD>
+  <TD>
+<SELECT name="S2E_RS485">
+<OPTION value="0" <!--#ECHO VAR="S2E_RS485@0"-->>RS-232C
+<OPTION value="1" <!--#ECHO VAR="S2E_RS485@1"-->>RS-485 (Half Duplex)
+<OPTION value="2" <!--#ECHO VAR="S2E_RS485@2"-->>RS-485 (Full Duplex)
+</SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Baud Rate:</TD>
+  <TD>
+<SELECT name="S2E_BAUD">
+<OPTION value="300" <!--#ECHO VAR="S2E_BAUD@300"-->>300
+<OPTION value="600" <!--#ECHO VAR="S2E_BAUD@600"-->>600
+<OPTION value="1200" <!--#ECHO VAR="S2E_BAUD@1200"-->>1200
+<OPTION value="2400" <!--#ECHO VAR="S2E_BAUD@2400"-->>2400
+<OPTION value="4800" <!--#ECHO VAR="S2E_BAUD@4800"-->>4800
+<OPTION value="9600" <!--#ECHO VAR="S2E_BAUD@9600"-->>9600
+<OPTION value="19200" <!--#ECHO VAR="S2E_BAUD@19200"-->>19200
+<OPTION value="38400" <!--#ECHO VAR="S2E_BAUD@38400"-->>38400
+<OPTION value="57600" <!--#ECHO VAR="S2E_BAUD@57600"-->>57600
+<OPTION value="115200" <!--#ECHO VAR="S2E_BAUD@115200"-->>115200
+<OPTION value="230400" <!--#ECHO VAR="S2E_BAUD@230400"-->>230400
+<OPTION value="921600" <!--#ECHO VAR="S2E_BAUD@921600"-->>921600
+</SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Parity:</TD>
+  <TD>
+<SELECT name="S2E_PARITY">
+<OPTION value="0" <!--#ECHO VAR="S2E_PARITY@0"-->>None
+<OPTION value="1" <!--#ECHO VAR="S2E_PARITY@1"-->>Odd
+<OPTION value="2" <!--#ECHO VAR="S2E_PARITY@2"-->>Even
+</SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Data Bits:</TD>
+  <TD>
+<SELECT name="S2E_LEN">
+<OPTION value="7" <!--#ECHO VAR="S2E_LEN@7"-->>7
+<OPTION value="8" <!--#ECHO VAR="S2E_LEN@8"-->>8
+</SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Stop Bits:</TD>
+  <TD>
+<SELECT name="S2E_STOPB">
+<OPTION value="1" <!--#ECHO VAR="S2E_STOPB@1"-->>1
+<OPTION value="2" <!--#ECHO VAR="S2E_STOPB@2"-->>2
+</SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Flow Control:</TD>
+  <TD>
+<SELECT name="S2E_FLOW">
+<OPTION value="0" <!--#ECHO VAR="S2E_FLOW@0"-->>None
+<OPTION value="1" <!--#ECHO VAR="S2E_FLOW@1"-->>XON/XOFF
+<OPTION value="2" <!--#ECHO VAR="S2E_FLOW@2"-->>RTS/CTS
+</SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>DMA Transfer Mode:</TD>
+  <TD>
+<SELECT name="S2E_DMA">
+<OPTION value="0" <!--#ECHO VAR="S2E_DMA@0"-->>Disable
+<OPTION value="1" <!--#ECHO VAR="S2E_DMA@1"-->>Enable
+</SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD colspan="2">
+    <INPUT type="submit" name="set" value="Submit">
+  </TD>
+</TR>
+</TABLE>
+
+
+</FORM>
+</DIV>
+
+</BODY>
+</HTML>

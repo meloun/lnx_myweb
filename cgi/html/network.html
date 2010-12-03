@@ -1,0 +1,77 @@
+<HTML> 
+<HEAD>
+<META http-Equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<BASE target="main">
+<TITLE>Network Setup</TITLE>
+</HEAD>
+
+<BODY bgcolor="#FFFBF0" LINK="#0000FF" VLINK="#0000FF" ALINK="#33CCFF">
+
+<TABLE width=100% border=0 cellspacing=0 cellpadding=2> 
+  <TR>
+    <TD align=left width=80% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+        <B>> Menu > Network Setup</B>
+      </FONT>
+    </TD>
+    <TD align=right width=20% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+	<B><< <A HREF="/cgi-bin/start.cgi?html=main.html">Main</A></B>
+     </FONT>
+   </TD>
+</TR>
+</TABLE>
+
+<DIV ALIGN=Center>
+<FORM action="/cgi-bin/start.cgi" method="post">
+<INPUT type="hidden" name="func" value="network">
+<A name="NETWORK"></A>
+<TABLE summary="network" width="95%" border="1" bgcolor="#FFFFF0">
+
+<TR>
+  <TD colspan="2" bgcolor="#BBD0FF">
+    <FONT color="#0000FF"><B>Network Setup</B></FONT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>DHCP Client:</TD>
+  <TD>
+<SELECT name="NET_DHCP">
+<OPTION value="0" <!--#ECHO VAR="NET_DHCP@0"-->>Disable
+<OPTION value="1" <!--#ECHO VAR="NET_DHCP@1"-->>Enable
+</SELECT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>IP Address:</TD>
+  <TD>
+    <INPUT type="text" size="40" maxlength="20" name="NET_IPADDR" value="<!--#ECHO VAR="NET_IPADDR"-->">
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Network Mask:</TD>
+  <TD>
+    <INPUT type="text" size="40" maxlength="20" name="NET_SUBNET" value="<!--#ECHO VAR="NET_SUBNET"-->">
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Gateway:</TD>
+  <TD>
+    <INPUT type="text" size="40" maxlength="20" name="NET_GATEWAY" value="<!--#ECHO VAR="NET_GATEWAY"-->">
+  </TD>
+</TR>
+  </TD>
+</TR>
+<TR>
+  <TD colspan="2">
+    <INPUT type="submit" name="set" value="Submit">
+  </TD>
+</TR>
+</TABLE>
+
+
+</FORM>
+</DIV>
+</BODY>
+</HTML>

@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<BASE target="main">
+<TITLE>SSH</TITLE>
+</HEAD>
+
+<BODY bgcolor="#FFFBF0" LINK="#0000FF" VLINK="#0000FF" ALINK="#33CCFF">
+
+<TABLE width=100% border=0 cellspacing=0 cellpadding=2> 
+  <TR>
+    <TD align=left width=80% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+        <B>> Menu > SSH</B>
+      </FONT>
+    </TD>
+    <TD align=right width=20% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+	<B><< <A HREF="/cgi-bin/start.cgi?html=main.html">Main</A></B>
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+
+<DIV ALIGN=Center>
+<FORM ENCTYPE="multipart/form-data" action="/cgi-bin/start.cgi" method="post">
+<INPUT type="hidden" name="func" value="ssh">
+<A name="SSH"></A>
+<TABLE summary="ssh" width="95%" border="1" bgcolor="#FFFFF0">
+<TR>
+  <TD colspan="2" bgcolor="#BBD0FF" >
+    <FONT color="#0000FF"><B>SSH Server Key</B></FONT>
+  </TD>
+</TR>
+
+<TR>
+  <TD width="40%" NOWRAP>RSA Private Key: <!--#ECHO VAR="S2E_SSH_SERVER_RSA_PRIV"--></TD>
+  <TD>
+    <input type='file' name='S2E_SSH_SERVER_RSA_PRIV'>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>DSA Private Key: <!--#ECHO VAR="S2E_SSH_SERVER_DSA_PRIV"--></TD>
+  <TD>
+    <input type='file' name='S2E_SSH_SERVER_DSA_PRIV'>
+  </TD>
+</TR>
+
+<TR>
+  <TD colspan="2">
+    <INPUT type="submit" name="set" value="Submit">
+  </TD>
+</TR>
+</TABLE>
+
+</FORM>
+
+<TABLE summary="cond" width="95%" border="1" bgcolor="#FFFFF0">
+<FORM action="/cgi-bin/start.cgi" method="post">
+<INPUT type="hidden" name="func" value="ssh">
+<A name="SSH"></A>
+
+<TR>
+  <TD colspan="2" bgcolor="#BBD0FF">
+    <FONT color="#0000FF"><B>SSH Server Authorized Users</B></FONT>
+  </TD>
+</TR>
+<TR>
+  <TD colspan="2">
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST_START"-->
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST@0"-->
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST@1"-->
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST@2"-->
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST@3"-->
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST@4"-->
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST@5"-->
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST@6"-->
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST@7"-->
+<!--#ECHO VAR="S2E_SSH_SERVER_USER_LIST_END"-->
+  </TD>
+</TR>
+
+</FORM>
+
+<FORM action="/cgi-bin/start.cgi" method="post">
+<INPUT type="hidden" name="func" value="ssh">
+<A name="SSH"></A>
+
+<TR>
+  <TD colspan="2" bgcolor="#BBD0FF">
+    <FONT color="#0000FF"><B>Add new user</B></FONT>
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Username:</TD>
+  <TD>
+    <INPUT type="text" size="40" maxlength="32" name="S2E_SSH_SERVER_USER" value="">
+  </TD>
+</TR>
+<TR>
+  <TD width="40%" NOWRAP>Password:</TD>
+  <TD>
+    <INPUT type="password" size="40" maxlength="32" name="S2E_SSH_SERVER_PASS" value="">
+  </TD>
+</TR>
+
+<TR>
+  <TD colspan="2">
+    <INPUT type="submit" name="set" value="Add">
+  </TD>
+</TR>
+</FORM>
+
+</TABLE>
+
+
+</DIV>
+
+</BODY>
+</HTML>

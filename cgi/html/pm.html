@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<BASE target="main">
+<TITLE>Power Monitoring</TITLE>
+</HEAD>
+
+<BODY bgcolor="#FFFBF0" LINK="#0000FF" VLINK="#0000FF" ALINK="#33CCFF">
+
+<TABLE width=100% border=0 cellspacing=0 cellpadding=2> 
+  <TR>
+    <TD align=left width=80% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+        <B>> Menu > Main</B>
+      </FONT>
+    </TD>
+    <TD align=right width=20% bgcolor="#AADDDD">
+      <FONT size=2 color=#0000FF>
+	<B><< <A HREF="/cgi-bin/myweb.cgi?html=pm.html">Power Management</A></B>
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+
+<DIV ALIGN=Center>
+<TABLE summary="pm" width="45%" border="1" bgcolor="#FFFFF0">
+<TR>
+  <TD colspan="5" bgcolor="#BBD0FF" NOWRAP>
+    <FONT color="#0000FF"><B>Power Monitoring</B></FONT>
+  </TD>
+</TR>
+<TR>
+  <TD colspan="4"></TD> 
+  <TH  bgcolor="#BBD0FF">Unit</TD>
+</TR>
+<TR>
+  <TD bgcolor="#BBD0FF">Frequence</TD>
+  <TD colspan="3"><!--#ECHO VAR="PM_FREQUENCE"--> </TD>
+  <TD>[Hz]</TD>
+</TR>
+<TR>
+  <TD bgcolor="#BBD0FF">Temperature</TD>
+  <TD colspan="3"><!--#ECHO VAR="PM_TEMPERATURE"--> </TD>
+  <TD >[°C]</TD>
+</TR>
+<TR>
+  <TH></TH>
+  <TH bgcolor="#BBD0FF"  NOWRAP>L1</TH>
+  <TH bgcolor="#BBD0FF"  NOWRAP>L2</TH>
+  <TH bgcolor="#BBD0FF"  NOWRAP>L3</TH>  
+</TR>
+<TR>
+  <TD bgcolor="#BBD0FF">Voltage</TD>
+  <TD><!--#ECHO VAR="PM_L1_VOLTAGE"--> </TD>
+  <TD><!--#ECHO VAR="PM_L2_VOLTAGE"--> </TD>
+  <TD><!--#ECHO VAR="PM_L3_VOLTAGE"--> </TD>
+  <TD>[V]</TD>
+</TR>
+<TR>
+  <TD bgcolor="#BBD0FF">Current</TD>
+  <TD><!--#ECHO VAR="PM_L1_CURRENT"--> </TD>
+  <TD><!--#ECHO VAR="PM_L2_CURRENT"--> </TD>
+  <TD><!--#ECHO VAR="PM_L3_CURRENT"--> </TD>
+  <TD>[A]</TD>
+</TR>
+<TR>
+  <TD bgcolor="#BBD0FF">Power</TD>
+  <TD><!--#ECHO VAR="PM_L1_POWER"--> </TD>
+  <TD><!--#ECHO VAR="PM_L2_POWER"--> </TD>
+  <TD><!--#ECHO VAR="PM_L3_POWER"--> </TD>
+  <TD>[W]</TD>
+</TR>
+</TABLE>
+</DIV>
+
+
+</BODY>
+</HTML>

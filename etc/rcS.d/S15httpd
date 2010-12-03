@@ -1,0 +1,13 @@
+#!/bin/sh
+
+for fp in /var/etc/s2e-*; do
+	[ -f ${fp} ] && f=`basename $fp` && [ ! -f /usr/local/etc/${f} ] && cp ${fp} /usr/local/etc/${f}
+	[ -f ${fp} ] && f=`basename $fp` && [ -f /usr/local/etc/${f} ] && rm ${fp} && ln -sf /usr/local/etc/${f} ${fp}
+done
+
+. /etc/rc.config
+
+if [ "${CU_LANTRONIX_S2E_WEB_AUTOSTART}" = y ]; then
+	if [ "${CU_BOA_SRC_BOA}" = y ]; then boa -d -c /etc  > /dev/null 2>&1 & fi
+	if [ "${CU_AXTLS_HTTPS}" = y ]; then axhttpd  > /dev/null 2>&1 & fi
+fi

@@ -1,0 +1,12 @@
+# myweb.config
+ext_inputs {
+	ch_1_state		1	# 
+	ch_2_state		2	# 
+}
+
+ext_outputs {
+	ch_1_current_state		1	#
+	ch_2_current_state		1	#
+	ch_1_default_state		1	#
+	ch_2_default_state		0	#
+}
